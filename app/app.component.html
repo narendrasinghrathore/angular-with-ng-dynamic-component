@@ -1,0 +1,14 @@
+<hello-en name="{{ name }}"></hello-en>
+<p>
+	Start editing to see some magic happen :)
+</p>
+
+<!-- 使用 ng-dynamic-component 的 ndc-dynamic 元件 -->
+<ndc-dynamic [ndcDynamicComponent]="component"
+             [ndcDynamicInputs]="inputs"
+             [ndcDynamicOutputs]="outputs"></ndc-dynamic>
+
+<!-- 使用 Angular 4 的 *ngComponentOutlet 語法糖 -->
+<ng-container *ngComponentOutlet="component;
+               ndcDynamicInputs: inputs;
+               ndcDynamicOutputs: outputs"></ng-container>
